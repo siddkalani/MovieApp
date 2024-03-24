@@ -5,7 +5,7 @@ import React, { useContext, useEffect, useState } from "react";
 
 const AppContext = React.createContext();
 
-const API_URL = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}`
+const API_URL = `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}`
 
 const AppProvider = ({children}) => {
     const[isLoading , setIsLoading] = useState(true)
@@ -44,7 +44,7 @@ const AppProvider = ({children}) => {
     },[])
     
 
-    return (<AppContext.Provider value={{isLoading , dataa , movie,getMovies,query , setQuery}}>{children}</AppContext.Provider>)
+    return (<AppContext.Provider value={{isLoading , dataa , movie , getMovies ,query , setQuery}}>{children}</AppContext.Provider>)
 };
 
 const useGlobalFunction=()=>{
