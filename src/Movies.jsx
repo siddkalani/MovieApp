@@ -5,7 +5,7 @@ import "./App.css"
 
 const Movies = (props) => {
     const {movie} = useGlobalFunction();
-
+    console.log(movie)
       return (
         
         <section className="movie-page">
