@@ -15,7 +15,7 @@ const AppProvider = ({children}) => {
     })
     
     const getMovies = async(url) =>{
-        
+
         setIsLoading(true)
         
     try{
@@ -59,8 +59,6 @@ const AppProvider = ({children}) => {
         },500)
         return()=> clearTimeout(timeOut);
     },[query])
-    
-
     return (<AppContext.Provider value={{isLoading , dataa , movie , getMovies ,query , setQuery,dataa , setDataa}}>{children}</AppContext.Provider>)
 };
 
